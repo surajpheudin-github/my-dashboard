@@ -1,0 +1,209 @@
+body {
+  background-color: #1b203d;
+}
+
+.sidebar_control_button:hover {
+  background-color: skyblue;
+}
+
+.top_nav_div {
+  width: 100%;
+  height: 50px;
+  color: silver;
+  padding: 10px;
+}
+
+.top_nav_div > a {
+  font-size: 25px;
+  float: right;
+  margin: 0px 10px;
+  color: silver;
+  text-decoration: none;
+}
+.top_nav_div > a:hover {
+  color: white;
+}
+
+.top_nav_div > .page_title {
+  font-size: 20px;
+  left: 50px;
+  position: absolute;
+  margin: 0px;
+}
+
+.active {
+  border-left: 5px solid blue;
+}
+
+.sidebar_nav {
+  height: 100%;
+  background-color: #2a2b49;
+  position: absolute;
+  box-shadow: 10px 0px 20px;
+  z-index: 1;
+  display: block;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.sidebar_nav > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.sidebar_nav > ul > li {
+  width: 100%;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar_nav > ul > li > a {
+  text-decoration: none;
+  color: silver;
+}
+
+.sidebar_nav > ul > li > a > .icon {
+  font-size: 25px;
+}
+/* 
+.sidebar_nav > ul > li:hover {
+  background-color: grey;
+} */
+
+.sidebar_nav > ul > .sidebar_close_button {
+  padding: 0px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 25px;
+}
+
+.sidebar_nav > ul > .sidebar_close_button:hover {
+  background: lightblue;
+}
+
+.sidebar_control_div {
+  display: none;
+  float: left;
+}
+
+.mainmenu_manageOrders > a > i,
+.mainmenu_showStastics > a > i {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+}
+.submenu_manageOrders,
+.submenu_showStastics {
+  list-style: none;
+  width: 100%;
+  background: rgba(192, 192, 192, 1);
+  position: absolute;
+  margin-left: 255px;
+  padding: 0px;
+  height: 50%;
+  display: none;
+}
+.submenu_manageOrders {
+  top: 90px;
+}
+
+.submenu_showStastics {
+  top: 135px;
+}
+.submenu_manageOrders > li,
+.submenu_showStastics > li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.submenu_manageOrders > li > a,
+.submenu_showStastics > li > a {
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.submenu_manageOrders > li:hover,
+.submenu_showStastics > li:hover {
+  background-color: grey;
+}
+main {
+  height: 100%;
+  text-align: center;
+}
+
+main > .stastics {
+  height: 300px;
+  padding: 20px;
+}
+
+.stastics > div {
+  display: inline-block;
+  float: left;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  font-size: 20px;
+  background-color: #2a2b49;
+  color: silver;
+  padding: 10px 20px;
+  text-align: start;
+  border-radius: 20px;
+}
+
+.stastics > div > .total_number_of_stastics {
+  text-align: center;
+  margin: 20px;
+  animation: colorchange_animation 1s linear forwards;
+}
+
+@keyframes colorchange_animation {
+  0% {
+    color: grey;
+    font-size: 20px;
+  }
+  100% {
+    color: white;
+    font-size: 30px;
+  }
+}
+
+main > .recent_orders {
+  background-color: #2a2b49;
+  height: 270px;
+  margin: 20px;
+  padding: 0px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+.recent_orders > .recent_orders_table_title {
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.recent_orders > .recent_orders_table_div {
+  height: 92%;
+  overflow-x: scroll;
+  background: lightblue;
+  padding: 0px 20px;
+}
+
+.recent_orders_table > thead > tr > th {
+  background: silver;
+  position: sticky;
+  top: 0;
+}
+
+.recent_orders_table > tbody {
+  margin-top: 20px;
+  text-align: left;
+}
