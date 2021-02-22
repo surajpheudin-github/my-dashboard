@@ -31,17 +31,40 @@
         </div>
         <div class="stastics">
             <div class="customer_dashboard_stastics">
-                <div class="heading">Customers <i class="fa fa-users" aria-hidden="true"></i></div>
-                <div class="total_number_of_stastics">1,000</div>
+                <div class="heading">Products <i class="fa fa-users" aria-hidden="true"></i></div>
+                <div class="total_number_of_stastics"><?php
+                include 'connection.php';
+                $sql = "SELECT * FROM product_details";
+                $result = mysqli_query($conn,$sql);
+                $row = mysqli_num_rows($result);
+                echo $row;
+                ?></div>
             </div>
             <div class="order_dashboard_stastics">
-                <div class="heading">Orders <i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                <div class="total_number_of_stastics">2,000</div>
+                <div class="heading">Order <i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                <div class="total_number_of_stastics"><?php
+                include 'connection.php';
+                $sql = "SELECT * FROM order_details";
+                $result = mysqli_query($conn,$sql);
+                $row = mysqli_num_rows($result);
+                echo $row;
+                ?></div>
             </div>
             <div class="confirmed_rate">
                 <div class="heading">Confirmed Rate <i style="color:lightgreen" class="fa fa-check-circle"
                         aria-hidden="true"></i></div>
                 <div class="total_number_of_stastics">40%</div>
+            </div>
+
+            <div class="sales_stastics">
+                <div class="heading">Sales <i class="fa fa-money" aria-hidden="true"></i></div>
+                <div class="total_number_of_stastics"><?php
+                include 'connection.php';
+                $result = mysqli_query($conn, 'SELECT SUM(total_amount) AS value_sum FROM order_details'); 
+                $row = mysqli_fetch_assoc($result); 
+                $sum = $row['value_sum'];
+                echo "RS ".$sum;
+                ?></div>
             </div>
         </div>
         <div class="recent_orders">
@@ -51,7 +74,7 @@
                 <?php
             include "connection.php";
 
-            $sql = "SELECT * FROM order_details ORDER BY id DESC limit 5";
+            $sql = "SELECT * FROM order_details ORDER BY order_id DESC limit 5";
             $mysql = mysqli_query($conn,$sql);
 
             //table for order_details started
@@ -75,26 +98,18 @@
             ";
             echo "<tbody>";
             while($result = $mysql -> fetch_assoc()){
-                   echo "<tr>
-                    <td>".$result['id']."</td>
-                    <td>".$result['date']."</td>
-                    <td>".$result['customer_name']."</td>
-                    <td>".$result['product_name']."</td>
-                    <td>".$result['contact_number']."</td>
-                    <td>".$result['address']."</td>
-                    <td>".$result['price']."</td>
-                    <td>".""."</td>
-                    <td>".""."</td>
-                    <td>
-                    <select>
-                    <option></option>
-                    <option>Confirmed</option>
-                    <option>Cancelled</option>
-                    <option>Shipping</option>
-                    <option>Delivered</option>
-                    </select>
-                    </td>
-                    <td>".""."</td></tr>";
+                echo "<tr>
+                <td>".$result['order_id']."</td>
+                <td>".$result['date']."</td>
+                <td>".$result['customer_name']."</td>
+                <td>".$result['product_name']."</td>
+                <td>".$result['contact_number']."</td>
+                <td>".$result['address']."</td>
+                <td>".$result['price']."</td>
+                <td>".$result['shipping_charge']."</td>
+                <td>".$result['total_amount']."</td>
+                <td>".$result['status']."</td>
+                <td>".""."</td></tr>";
                     
             }
             echo " </tbody>";

@@ -2,7 +2,7 @@
 $dbserver = "localhost";
 $dbuser = "root";
 $dbpassword = "";
-$dbname = "maruti_bazaar_data";
+$dbname = "management_system";
 
 $conn = mysqli_connect($dbserver,$dbuser,$dbpassword,$dbname);
 if($conn){

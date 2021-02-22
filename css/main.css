@@ -68,10 +68,6 @@ body {
 .sidebar_nav > ul > li > a > .icon {
   font-size: 25px;
 }
-/* 
-.sidebar_nav > ul > li:hover {
-  background-color: grey;
-} */
 
 .sidebar_nav > ul > .sidebar_close_button {
   padding: 0px;
@@ -91,49 +87,30 @@ body {
   float: left;
 }
 
+@keyframes text_clip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+.mainmenu_dashboard:hover,
+.mainmenu_manageOrders:hover,
+.mainmenu_showStastics:hover,
+.mainmenu_help:hover {
+  background-image: linear-gradient(to right, white 50%, silver, grey);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text_clip 1.5s linear infinite;
+}
+
 .mainmenu_manageOrders > a > i,
 .mainmenu_showStastics > a > i {
   position: absolute;
   right: 10px;
   font-size: 20px;
 }
-.submenu_manageOrders,
-.submenu_showStastics {
-  list-style: none;
-  width: 100%;
-  background: rgba(192, 192, 192, 1);
-  position: absolute;
-  margin-left: 255px;
-  padding: 0px;
-  height: 50%;
-  display: none;
-}
-.submenu_manageOrders {
-  top: 90px;
-}
 
-.submenu_showStastics {
-  top: 135px;
-}
-.submenu_manageOrders > li,
-.submenu_showStastics > li {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid grey;
-}
-
-.submenu_manageOrders > li > a,
-.submenu_showStastics > li > a {
-  text-decoration: none;
-  color: black;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.submenu_manageOrders > li:hover,
-.submenu_showStastics > li:hover {
-  background-color: grey;
-}
 main {
   height: 100%;
   text-align: center;
@@ -148,7 +125,7 @@ main > .stastics {
   display: inline-block;
   float: left;
   margin: 20px;
-  width: 300px;
+  width: 290px;
   height: 300px;
   font-size: 20px;
   background-color: #2a2b49;
@@ -205,5 +182,5 @@ main > .recent_orders {
 
 .recent_orders_table > tbody {
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
 }

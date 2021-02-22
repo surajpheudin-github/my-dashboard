@@ -33,7 +33,9 @@ $('document').ready(function(){
    
     //hovering main_menu and sub_menu
     $(".mainmenu_dashboard").mouseenter(function(){  
-        $('.mainmenu_dashboard > a').css("color","white");
+        $('.mainmenu_dashboard > a').css({
+            color:"white",
+        });
     });
 
     $(".mainmenu_dashboard").mouseleave(function(){

@@ -1,0 +1,141 @@
+.add_order_div {
+  width: 320px;
+  padding: 10px;
+}
+
+.add_product_div {
+  width: 320px;
+  padding: 10px;
+}
+
+.form_title {
+  width: 300px;
+  height: 40px;
+  background: #0e02023b;
+  border-radius: 50px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 5px 0px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form_main {
+  background: #0e02023b;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+}
+
+.form_main > select {
+  width: 230px;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.add_order_div .form_main > input {
+  width: 230px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.add_product_div .form_main > input {
+  width: 230px;
+  margin: 2px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.form_main > button {
+  margin: 10px;
+}
+
+.order_list {
+  background-color: #2a2b49;
+  height: 270px;
+  margin: 0px 20px;
+  margin-top: 20px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.recent_100_orders_table_title > a {
+  position: absolute;
+  right: 50px;
+}
+
+.order_list > .recent_100_orders_table_title {
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order_list > .recent_100_orders_table_div {
+  height: 92%;
+  overflow-x: scroll;
+  background: lightblue;
+  padding: 0px 20px;
+}
+
+.recent_100_orders_table > thead > tr > th {
+  background: silver;
+  position: sticky;
+  top: 0;
+}
+
+.recent_100_orders_table > tbody {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*product listing table */
+
+.product_listing_div {
+  height: 330px;
+  position: absolute;
+  right: 50px;
+  margin: 10px;
+}
+.product_listing_div > .product_listing_table_title {
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product_listing_table_title > input {
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
+  height: 25px;
+}
+
+.product_listing_table_title > button {
+  height: 25px;
+  font-size: 10;
+  width: 50px;
+  padding: 0px;
+  margin-top: -7px;
+}
+
+.product_listing_div > .product_listing_table_div {
+  height: 92%;
+  overflow-y: scroll;
+  background: skyblue;
+  padding: 0px 10px;
+  width: 300px;
+}
+
+.product_listing_table > thead > tr > th {
+  background: silver;
+  position: sticky;
+  top: 0;
+  text-align: left;
+}
+
+.product_listing_table > tbody {
+  margin-top: 20px;
+  text-align: left;
+}
